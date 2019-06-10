@@ -1,16 +1,19 @@
-import posts from './_posts.js';
+import { sendJson } from '../../utils/api';
+import get_posts from './_posts.js';
 
-const contents = JSON.stringify(posts.map(post => {
-	return {
-		title: post.title,
-		slug: post.slug
-	};
-}));
+let json;
 
 export function get(req, res) {
-	res.writeHead(200, {
-		'Content-Type': 'application/json'
-	});
+	if (!json || process.env.NODE_ENV !== 'production') {
+		json = get_posts()
+			.filter(post => !post.metadata.draft)
+			.map(post => {
+				return {
+					slug: post.slug,
+					metadata: post.metadata
+				};
+			});
+	}
 
-	res.end(contents);
+	sendJson(res, json);
 }
