@@ -1,34 +1,12 @@
 <script>
 	export let segment;
-	export let isAdmin;
 </script>
-
-<nav>
-	<ul>
-		<li><a class:selected='{segment === undefined}' href='.'>home</a></li>
-		<li><a class:selected='{segment === "about"}' href='about'>about</a></li>
-
-		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
-		     the blog data when we hover over the link or tap it on a touchscreen -->
-		<li><a rel=prefetch class:selected='{segment === "blog"}' href='blog'>blog</a></li>
-
-		{#if isAdmin}
-		<li><a rel=prefetch href='admin/#/' class:selected='{segment === "admin"}'>admin</a></li>
-		{/if}
-	</ul>
-
-	<div data-netlify-identity-button></div>
-</nav>
 
 <style>
 	nav {
-		border-bottom: 1px solid rgba(170,30,30,0.1);
+		border-bottom: 1px solid rgba(255,62,0,0.1);
 		font-weight: 300;
 		padding: 0 1em;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
 	}
 
 	ul {
@@ -58,7 +36,7 @@
 		content: '';
 		width: calc(100% - 1em);
 		height: 2px;
-		background-color: rgb(170,30,30);
+		background-color: rgb(255,62,0);
 		display: block;
 		bottom: -1px;
 	}
@@ -69,3 +47,14 @@
 		display: block;
 	}
 </style>
+
+<nav>
+	<ul>
+		<li><a class='{segment === undefined ? "selected" : ""}' href='.'>home</a></li>
+		<li><a class='{segment === "about" ? "selected" : ""}' href='about'>about</a></li>
+
+		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
+		     the blog data when we hover over the link or tap it on a touchscreen -->
+		<li><a rel=prefetch class='{segment === "blog" ? "selected" : ""}' href='blog'>blog</a></li>
+	</ul>
+</nav>

@@ -1,28 +1,17 @@
 backend:
   name: git-gateway
-  branch: master
-  accept_roles:
-    - admin
-    - editor
+  branch: master # Branch to update (optional; defaults to master)
 
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
-
-site_url: https://fchpr.netlify.com
-display_url: https://fchpr.netlify.com
-
-slug:
-  encoding: "ascii"
-  clean_accents: true
-  sanitize_replacement: "_"
+media_folder: "static/uploads"
+public_folder: "uploads"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "content/blog"
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    create: true
-    fields:
-      - { name: "date", label: "Publish Date", widget: "datetime" }
-      - { name: "title", label: "Title" }
-      - { name: "body", label: "Body", widget: "markdown" }
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "blog" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Featured Image", name: "featuredImage", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}

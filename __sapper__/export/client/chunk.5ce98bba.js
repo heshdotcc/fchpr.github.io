@@ -1,2 +1,0 @@
-import{c as s,d as t,b as c,e,B as n,m as a,a as i,j as r}from"./chunk.118b48cb.js";function l(s){var t,c;return{c(){t=e("link"),c=e("script"),this.h()},l(s){t=e("link"),c=e("script"),this.h()},h(){t.href="admin/config.yml",n(t,"type","text/yaml"),t.rel="cms-config-url",c.src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"},m(s,e){a(document.head,t),a(document.head,c)},p:i,i:i,o:i,d(s){r(t),r(c)}}}export default class extends s{constructor(s){super(),t(this,s,null,l,c,[])}}
-//# sourceMappingURL=chunk.5ce98bba.js.map
