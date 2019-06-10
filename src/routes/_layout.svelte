@@ -12,10 +12,15 @@
 	let currentUser;
 
 	onMount(() => {
-		currentUser = netlifyIdentity.currentUser();
-
-		netlify.on('login', user => currentUser = user);
-		netlify.on('logout', () => currentUser = undefined);
+		if (window.netlifyIdentity) {
+			window.netlifyIdentity.on("init", user => {
+				if (!user) {
+					window.netlifyIdentity.on("login", () => {
+						document.location.href = "/admin/";
+					});
+				}
+			});
+		}
 	});
 </script>
 
