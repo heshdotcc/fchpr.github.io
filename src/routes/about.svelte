@@ -2,6 +2,20 @@
 	<title>About</title>
 </svelte:head>
 
-<h1>About this site</h1>
+<div>
+	<h1>About</h1>
+	<p>Hic et nunc.</p>
+</div>
 
-<p>This is the 'about' page. There's not much here.</p>
+<style>
+	div {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	h1 {
+		text-align: center;
+	}
+</style>

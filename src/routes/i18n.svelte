@@ -3,9 +3,8 @@
 </svelte:head>
 
 <div>
-	<div>	
-		<h1>Software</h1>
-	</div>
+	<h1>English</h1>
+	<h1>Español</h1>
 </div>
 
 <style>

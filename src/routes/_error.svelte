@@ -6,6 +6,13 @@
 </script>
 
 <style>
+	div {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
 	h1, p {
 		margin: 0 auto;
 	}
@@ -31,10 +38,9 @@
 	<title>{status}</title>
 </svelte:head>
 
-<h1>{status}</h1>
-
-<p>{error.message}</p>
-
-{#if dev && error.stack}
-	<pre>{error.stack}</pre>
-{/if}
+<div>
+	<h1>{status}</h1>
+	{#if dev && error.stack}
+		<pre>{error.stack}</pre>
+	{/if}
+</div>
