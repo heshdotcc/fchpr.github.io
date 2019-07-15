@@ -3,6 +3,8 @@
 
 <style>
   footer {
+    font-size: 16px;
+    z-index: 1;
     grid-area: footer;
     display: flex;
     align-items: center;
@@ -13,6 +15,9 @@
 </style>
 
 <footer>
-<a href="tel:+54-11-5246-1930">(+5411) 5246-1930</a>
-<p>Yerbal 899 (CABA)</p>
+  <a href="mailto:hi@fedr.cc">hi@fedr.cc</a>
+  <!-- 
+  <a href="tel:+54-11-5246-1930">(+5411) 5246-1930</a>
+  -->
+  <p>Argentina</p>
 </footer>
