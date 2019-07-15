@@ -26,6 +26,11 @@
   a img:nth-child(1) {
     margin-right: 10px;
   }
+  header > img {
+    font-size: 21px;
+    margin-top: 2px;
+    margin-right: -20px;
+  }
   img {
     width: 2em;
   }
@@ -35,6 +40,7 @@
   li a {
     display: flex;
     align-items: center;
+    font-size: 18px;
   }
   /* Give every child element its grid name */
   .header {
