@@ -3,8 +3,7 @@
 </svelte:head>
 
 <div>
-	<h1>About</h1>
-	<p>Hic et nunc.</p>
+	<h1>Hic et nunc</h1>
 </div>
 
 <style>
