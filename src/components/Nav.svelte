@@ -26,7 +26,7 @@
   a img:nth-child(1) {
     margin-right: 10px;
   }
-  header > img {
+  header:nth-child(2) {
     font-size: 21px;
     margin-top: 2px;
     margin-right: -20px;
@@ -102,7 +102,10 @@
   
 <header class="header">
   <p>Bitácora del cascarón</p>
+<!--
   <img src="./logo.svg" alt="Φ" on:click={toggleAside}>
+-->
+  <p on:click={toggleAside}>Φ</p>
 </header>
 <aside class="{false ? 'sidenav.active' : 'sidenav'}">
 	<ul class="sidenav__list" on:click={toggleAside}>
