@@ -50,8 +50,8 @@ code {
 }
 
 pre {
-	color: #fff;
-	background-color: #001f2a!important;
+	color: #333;
+	background-color: #f0f0f0;
 	max-width: max-content;
 	word-wrap: break-word;
 	white-space: pre-wrap;
