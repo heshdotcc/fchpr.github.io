@@ -1,5 +1,8 @@
 <script>
- 	export let segment, state;
+  export let segment, state;
+   
+  import { goto } from '@sapper/app';
+
 	function toggleAside(event){
     if(window.innerWidth<=750){
       state = !state;
@@ -101,7 +104,7 @@
 </style>
   
 <header class="header">
-  <p>Bitácora del cascarón</p>
+  <p on:click={()=>goto('/')}>Hic et nunc</p>
 <!--
   <img src="./logo.svg" alt="Φ" on:click={toggleAside}>
 -->
@@ -110,19 +113,16 @@
 <aside class="{false ? 'sidenav.active' : 'sidenav'}">
 	<ul class="sidenav__list" on:click={toggleAside}>
     <li class="sidenav__list-item">
-      <a rel="prefetch" href="about">Apropos</a>
+      <a rel="prefetch" href="about">About</a>
     </li>
     <li class="sidenav__list-item">
-      <a rel="prefetch" href="blog">Brief</a>
+      <a rel="prefetch" href="blog">Blog</a>
     </li>
 		<li class="sidenav__list-item">
-      <a rel="prefetch" href="/">Index</a>
+      <a rel="prefetch" href="resume">Resume</a>
     </li>
     <li class="sidenav__list-item">
-      <a rel="prefetch" href="i18n">Region</a>
-    </li>
-		<li class="sidenav__list-item">
-      <a rel="prefetch" href="search">Search</a>
+      <a rel="prefetch" href="https://github.com/fchpr/boiler">Source code</a>
     </li>
 	</ul>
 </aside>
