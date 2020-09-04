@@ -118,9 +118,6 @@
     <li class="sidenav__list-item">
       <a rel="prefetch" href="blog">Blog</a>
     </li>
-		<li class="sidenav__list-item">
-      <a rel="prefetch" href="resume">Resume</a>
-    </li>
     <li class="sidenav__list-item">
       <a rel="prefetch" href="https://github.com/fchpr/boiler">Source code</a>
     </li>
