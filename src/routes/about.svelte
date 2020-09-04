@@ -3,9 +3,11 @@
 </svelte:head>
 
 <div class="container">
-	<p>
+	<h2 class="center">
 		This site is the result of the integration of various technologies, without them nothing would have been possible...
-	</p>
+	</h2>
+	<br>
+	<br>
 	<div class="branding">
 		<div>
 			<a href="https://svelte.dev">
@@ -23,8 +25,9 @@
 				<img style="width: auto;" src="openlayers.png" alt="OpenLayers">
 			</a>
 		</div>
-</div>
-	<p class="center">Feel free to view and redistribute this <a href="https://github.com/fchpr/boiler"><b>project source code.</b></a> Thanks you all!</p>
+	</div>
+	<br>
+	<h2 class="center">Feel free to view and redistribute this <a href="https://github.com/fchpr/boiler"><b>project source code.</b></a> Thanks you all!</h2>
 </div>
 
 <style>
@@ -39,6 +42,10 @@
 	.branding {
 		display: flex;
 		justify-content: center;
+	}
+
+	.branding div {
+		text-align: center;
 	}
 
 	img {
